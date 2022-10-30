@@ -57,14 +57,21 @@
 </script>
 
 <svelte:head>
-    <title>open sng files</title>
+    <title>קורא קבצי sgn</title>
+    <meta name="description"
+        content="באתר הזה אתה יכול לפתוח קבצי sgn">
 </svelte:head>
 
-<div class="bottom">
-    made by asimon655 NaNach ;)
-</div>
-<div class="top">
+<div class="top right">
     בס״ד
+</div>
+
+<div class="top left">
+    made by <a href="https://github.com/asimon655/sgnViewer.git" target="_blank" rel="noreferrer">asimon655</a> NaNach ;)
+</div>
+
+<div class="bottom left">
+השימוש באתר הוא על אחריות המשתמש בלבד | The use of the website is at the sole responsibility of the user
 </div>
 
 <input type="file" bind:files>
@@ -102,9 +109,6 @@
     .bottom {
         position: fixed;
         bottom: 0;
-        left: 0;
-        font-size: smaller;
-        color: rgb(250, 162, 213);
         opacity: 50%;
         font-family: 'Times New Roman', Times, serif;
         z-index: -1;
@@ -112,9 +116,19 @@
     .top {
         position: absolute;
         top: 0;
-        right: 0;
         font-size: smaller;
         color: rgb(250, 162, 213);
         opacity: 50%;
+    }
+    .right {
+        right: 0;
+    }
+    .left {
+        left: 0;
+    }
+    @media (prefers-color-scheme: light) {
+        .top {
+            color: rgb(100, 100, 255);
+        }
     }
 </style>
